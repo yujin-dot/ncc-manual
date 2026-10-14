@@ -1,3 +1,5 @@
+function track(name, params){ if (window.gtag) gtag('event', name, params); }
+
 // Page navigation
 (function(){
   var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
@@ -25,6 +27,7 @@
     document.getElementById('next').disabled = n === TOTAL;
     main.scrollTop = 0;
     if (push && location.hash !== '#p' + n) history.replaceState(null, '', '#p' + n);
+    track('manual_page', { page_number: n, page_name: p.dataset.title });
   }
 
   function drawer(open){
@@ -46,6 +49,12 @@
     e.preventDefault();
     show(parseInt(a.getAttribute('href').slice(2), 10), true);
     drawer(false);
+  });
+
+  nav.querySelectorAll('.lang a').forEach(function(a){
+    a.addEventListener('click', function(){
+      track('language_switch', { from_language: document.documentElement.lang, to_language: a.lang });
+    });
   });
 
   document.addEventListener('keydown', function(e){
@@ -80,9 +89,10 @@
   function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function hl(s,k){var i=s.toLowerCase().indexOf(k);if(i<0)return esc(s);return esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+k.length))+'</mark>'+esc(s.slice(i+k.length));}
   function snip(s,k){s=s.replace(/\s+/g,' ').trim();var i=s.toLowerCase().indexOf(k);if(i<0)return s.slice(0,80);var a=Math.max(0,i-30);return (a?'…':'')+s.slice(a,i+k.length+50)+(i+k.length+50<s.length?'…':'');}
-  var hits=[], act=0;
+  var hits=[], act=0, timer, sent='';
   function render(){
     var k=q.value.trim().toLowerCase();
+    clearTimeout(timer);
     if(!k){box.hidden=true;return;}
     hits=idx.filter(function(o){return (o.t+' '+o.x).toLowerCase().indexOf(k)>-1;}).slice(0,12);
     act=0;
@@ -91,6 +101,10 @@
       return '<li><a href="#p'+o.n+'" data-i="'+i+'"'+(i===0?' class="act"':'')+'><div class="st">'+hl(o.t,k)+'</div><div class="sp">'+esc(o.p)+'</div>'+(inT?'':'<div class="sx">'+hl(snip(o.x,k),k)+'</div>')+'</a></li>';
     }).join(''):'<li class="none">'+esc(document.body.dataset.none)+'</li>';
     box.hidden=false;
+    timer=setTimeout(function(){
+      if(k===sent) return;
+      sent=k; track('search', { search_term: k, result_count: hits.length });
+    },1500);
   }
   function go(i){
     var o=hits[i]; if(!o) return;
