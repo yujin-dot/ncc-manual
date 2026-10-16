@@ -320,7 +320,7 @@
   <p class="eyebrow">06 · 알림</p>
   <h1>알림 레벨과 표시 규칙</h1>
   <p class="sub">대부분의 알림은 <b>알림 로그</b>(6-1)에 쌓입니다. 그중 현장 · 관제에서 급하게 확인해야 하는 알림은 화면에 따로 표시되며, 급한 정도에 따라 보이는 방식이 다릅니다.</p>
-<div class="info"><p><b>Level 0 / 1</b> — 화면 위에 <b>팝업으로 고정</b>됩니다. 직접 해제하기 전까지 사라지지 않습니다.</p><p><b>Level 2</b> — 카메라 화면에 <b>주황색 테두리가 잠깐 깜박</b>입니다. 내용은 알림 로그에서 확인하세요.</p></div>
+<div class="info"><p><b>Level 0 / 1</b> — 화면 위에 <b>팝업으로 고정</b>됩니다. 직접 해제하기 전까지 사라지지 않습니다.</p><p><b>Level 2</b> — 카메라 화면에 <b>주황색 테두리가 잠깐 깜박</b>입니다. 내용은 알림 로그에서 확인하세요.</p><p><b>Level 2 조치 안내</b> — 로봇이 멈추거나 시스템에 이상이 생기면 <b>화면 왼쪽 위에 알림 카드</b>가 나타나 조치 방법을 안내합니다.</p></div>
 <section class="card">
   <h2>Level 0 / Level 1 — 조치가 필요한 알림</h2>
 <div class="figwrap">
@@ -342,6 +342,24 @@
 </div>
 <div class="rows">
   <div class="row"><span class="num">8-2</span><div class="rc"><p class="rt">주황 테두리 3초 후 사라짐</p><p class="rd">주시가 필요한 알림입니다. 카메라 화면에 <b>주황색 테두리가 깜박이다가 3초 뒤 자동으로 사라집니다.</b></p><ul><li>바로 조치하기보다 상황을 지켜보라는 알림입니다.</li><li>어떤 알림이었는지는 <b>알림 로그</b>(6-1)에서 확인하세요.</li></ul></div></div>
+</div>
+</section><section class="card">
+  <h2>Level 2 — 로봇 정지 시 조치 안내 알림</h2>
+  <p class="lead">로봇이 멈췄거나 로봇 시스템에 이상이 생기면 <b>화면 왼쪽 위에 알림 카드</b>가 나타나, 원인과 해야 할 일을 함께 알려줍니다. 카드 색으로 알림 종류를 구분할 수 있습니다.</p>
+<div class="figwrap">
+<div class="fig">
+  <img src="../assets/img/51bdaf19817c.png" alt="화면 왼쪽 위 조치 안내 알림" loading="lazy" width="1240" height="469">
+  <span class="hot r" data-n="8-3" style="left:1.129%;top:2.132%;width:17.742%;height:16.205%"></span>
+  <span class="hot r" data-n="8-4" style="left:1.129%;top:19.616%;width:17.742%;height:50.959%"></span>
+  <span class="hot r" data-n="8-5" style="left:1.129%;top:71.642%;width:17.742%;height:28.145%"></span>
+</div>
+</div>
+<div class="rows">
+  <div class="row"><span class="num">8-3</span><div class="rc"><p class="rt">관제 중 장애물 인지</p><img src="../assets/img/3d00390921c2.png" alt="관제 중 장애물 인지 알림" loading="lazy" width="240" height="98" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"><p class="rd"><b>관제로 주행하는 중</b> 자동정지(<a href="#p6">3-4</a>)가 켜진 상태에서 장애물을 감지해 로봇이 멈추면 나타납니다.</p><ul><li>주변 장애물을 확인한 뒤 <b>자동정지를 OFF</b> 하고 주행을 다시 시작하세요.</li><li>자동정지를 OFF 하면 알림이 사라집니다.</li></ul></div></div>
+  <div class="row"><span class="num">8-4</span><div class="rc"><p class="rt">관제 요청 알림</p><p class="rd">자율주행 중 로봇이 스스로 해결하기 어려운 상황에서 멈추면 나타납니다. 카드에 멈춘 이유와 해야 할 일이 함께 표시됩니다.</p><ul><li><b>자율주행 고립 정지</b> · 앞 장애물이나 자율주행 판단 이상으로 멈춘 상태입니다. 주변을 확인한 뒤 관제로 개입해 빠져나오세요.<img src="../assets/img/30f3373503a7.png" alt="자율주행 고립 정지 알림" loading="lazy" width="240" height="97" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li><li><b>건널목 앞 정지</b> · 건널목 앞에서 멈춘 상태입니다. 신호를 확인한 뒤 횡단하세요. → <a href="#p13">08장</a><img src="../assets/img/37deb8232245.png" alt="건널목 앞 정지 알림" loading="lazy" width="240" height="78" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li><li><b>위치 · 경로 이탈</b> · 미니맵 위치 오차, 경로 소실 등으로 경로를 벗어난 상태입니다. GPS가 정상적으로 잡히는 구간까지 관제로 주행해 지정 경로로 돌아가세요.<img src="../assets/img/a584fb20772c.png" alt="위치 · 경로 이탈 알림" loading="lazy" width="240" height="117" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li></ul></div></div>
+  <div class="row"><span class="num">8-5</span><div class="rc"><p class="rt">로봇 시스템 이상</p><img src="../assets/img/097478257c38.png" alt="로봇 시스템 이상 알림" loading="lazy" width="240" height="154" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"><p class="rd">카메라 · 센서 · 구동부 등 로봇의 하드웨어 · 소프트웨어에 이상이 생기면 나타납니다. 이상이 생긴 부분과 <b>조치 버튼</b>이 함께 표시됩니다. <b>같은 알림이 반복되면 버튼을 누르세요.</b></p><ul><li>버튼은 알림에 따라 <b>[캠 재시작]</b> · <b>[XAVIER 재시작]</b> · <b>[로봇 재부팅]</b> 중 하나로 바뀝니다. 로봇 설정(<a href="#p12">07장</a>)에서 같은 조치를 찾지 않아도 바로 누를 수 있습니다.</li><li>로봇 전원을 직접 다시 켜야 하는 경우에는 버튼 대신 <b>‘로봇 전원 재시작 해주세요.’</b> 안내만 표시됩니다.<img src="../assets/img/957adc125ad7.png" alt="로봇 전원 재시작 안내 알림" loading="lazy" width="240" height="149" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li><li>조치한 뒤에도 카드와 버튼은 그대로 남습니다. 로봇이 자율주행으로 <b>다시 속도를 내는지</b> 확인해 해결 여부를 판단하세요.</li></ul></div></div>
+  <div class="row"><span class="num">8-6</span><div class="rc"><p class="rt">알림이 여러 개일 때 · 발생로그</p><img src="../assets/img/6551bac27641.png" alt="여러 알림과 발생로그" loading="lazy" width="240" height="247" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"><p class="rd">조치가 다른 알림이 2개 이상이면 <b>가장 최근 알림과 ‘외 N건’</b>으로 요약되고, 버튼은 <b>가장 큰 조치 하나</b>만 보입니다.</p><ul><li>조치 크기 순서: 캠 재시작 &lt; XAVIER 재시작 &lt; 로봇 재부팅 &lt; 로봇 전원 재시작</li><li>여러 카메라에 이상이 있으면 <b>[캠 재시작]</b> 버튼 하나로 관련된 카메라가 모두 재시작됩니다.</li><li>카드 아래 <b>[발생로그]</b>를 펼치면 발생한 알림 전체를 볼 수 있습니다. 반복된 알림은 옆에 <b>횟수</b>가 표시됩니다.</li></ul></div></div>
+  <div class="row"><span class="num">8-7</span><div class="rc"><p class="rt">알림 접기 · 사라짐</p><img src="../assets/img/ec8464512105.png" alt="접힌 알림(아이콘 모드)" loading="lazy" width="126" height="105" style="display:block;width:126px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"><p class="rd">알림 카드에 마우스를 올리면 왼쪽 위에 <b>접기 버튼</b>이 나타납니다. 누르면 아이콘과 제목만 보이게 접히고, 다시 누르면 펼쳐집니다.</p><ul><li>로봇이 다시 움직이면(속도 0.5km/h 초과) <b>자율주행 중에는 알림이 모두 사라지고</b>, 관제 · 현장 모드에서는 접힌 상태로 남습니다.</li><li>관제 · 현장 모드에서 접어 둔 알림은 자율주행으로 돌아간 뒤 <b>다음 알림부터 다시 펼쳐서</b> 표시됩니다.</li></ul></div></div>
 </div>
 </section>
 </section>
