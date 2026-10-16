@@ -46,6 +46,11 @@
     e.preventDefault();
     show(parseInt(a.getAttribute('href').slice(2), 10), true);
     drawer(false);
+    var to = a.dataset.to && document.getElementById(a.dataset.to);
+    if (to) {
+      main.scrollTop = to.getBoundingClientRect().top - main.getBoundingClientRect().top + main.scrollTop - 24;
+      to.classList.add('flash'); setTimeout(function(){ to.classList.remove('flash'); }, 1400);
+    }
   });
 
   document.addEventListener('keydown', function(e){
