@@ -214,6 +214,15 @@ td.n{font-family:var(--f-num); font-variant-numeric:tabular-nums; white-space:no
 }
 .jump span{font-size:13px; font-weight:600}
 
+.updates{margin:30px auto 0; max-width:470px; text-align:left}
+.updates h2{margin:0 0 2px; font-size:13px; font-weight:700; color:var(--ink)}
+.updates .tbl{margin-top:10px; background:var(--card)}
+.updates td{vertical-align:top; line-height:1.6}
+.updates td.n{color:var(--gray)}
+.updates td a{color:var(--blue); text-decoration:none; font-weight:600; white-space:nowrap}
+.updates td a:hover{text-decoration:underline}
+@media(max-width:600px){.updates th,.updates td{padding:8px 10px}}
+
 /* ------------------------------------------------------------- bottom bar */
 .botbar{
   flex:none; position:relative;
