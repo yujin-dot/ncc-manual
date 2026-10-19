@@ -356,12 +356,6 @@
 </section><section class="card" id="lv2-stop">
   <h2>Level 2 — 로봇 정지 시 조치 안내 알림</h2>
   <p class="lead">로봇이 멈췄거나 로봇 시스템에 이상이 생기면 <b>화면 왼쪽 위에 알림 카드</b>가 나타나, 원인과 해야 할 일을 함께 알려줍니다. 카드 색으로 알림 종류를 구분할 수 있습니다.</p>
-<div class="info"><h4>언제 표시되나요?</h4><table style="min-width:0;font-size:12.5px"><tbody>
-<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-3</b></td><td style="padding:4px 0">관제로 주행하는 중 <b>자동정지가 켜진 상태에서 장애물을 감지해 멈췄을 때</b></td></tr>
-<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-4</b></td><td style="padding:4px 0">자율주행 중 <b>앞 장애물 · 판단 이상으로 고립됐을 때</b>, <b>건널목 앞에서 멈췄을 때</b>, <b>위치 · 경로를 벗어났을 때</b></td></tr>
-<tr><td style="padding:4px 10px 4px 0;white-space:nowrap;border:none"><b>8-5</b></td><td style="padding:4px 0;border:none">카메라 · 센서 · 구동부 · 자율주행 소프트웨어 등 <b>로봇 시스템에 이상이 감지됐을 때</b></td></tr>
-</tbody></table><p style="margin-top:8px">자율주행 중에는 알림 카드가 펼쳐진 상태로 나타나고, 관제 · 현장 모드로 주행 중일 때는 아이콘과 제목만 보이는 접힌 상태로 나타납니다.</p></div>
-<div class="tbl" style="margin-bottom:16px"><table><thead><tr><th>번호</th><th>알림</th><th>알림 코드</th></tr></thead><tbody><tr><td class="n"><b>8-3</b></td><td>관제 중 장애물 인지</td><td class="n"><code>SDS-6</code></td></tr><tr><td class="n"><b>8-4</b></td><td>자율주행 고립 정지</td><td class="n"><code>ADS-25</code></td></tr><tr><td class="n"><b>8-4</b></td><td>건널목 앞 정지</td><td class="n"><code>ADS-33</code></td></tr><tr><td class="n"><b>8-4</b></td><td>위치 · 경로 이탈</td><td class="n"><code>ADS-27</code></td></tr><tr><td class="n"><b>8-5</b></td><td>로봇 시스템 이상</td><td>아래 8-5 표 참고</td></tr></tbody></table></div>
 <div class="figwrap">
 <div class="fig">
   <img src="../assets/img/51bdaf19817c.png" alt="화면 왼쪽 위 조치 안내 알림" loading="lazy" width="1240" height="469">
@@ -370,6 +364,12 @@
   <span class="hot r" data-n="8-5" style="left:1.129%;top:71.642%;width:17.742%;height:28.145%"></span>
 </div>
 </div>
+<div class="info"><h4>언제 표시되나요?</h4><table style="min-width:0;font-size:12.5px"><tbody>
+<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-3</b></td><td style="padding:4px 0">관제로 주행하는 중 <b>자동정지가 켜진 상태에서 장애물을 감지해 멈췄을 때</b></td></tr>
+<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-4</b></td><td style="padding:4px 0">자율주행 중 <b>앞 장애물 · 판단 이상으로 고립됐을 때</b>, <b>건널목 앞에서 멈췄을 때</b>, <b>위치 · 경로를 벗어났을 때</b></td></tr>
+<tr><td style="padding:4px 10px 4px 0;white-space:nowrap;border:none"><b>8-5</b></td><td style="padding:4px 0;border:none">카메라 · 센서 · 구동부 · 자율주행 소프트웨어 등 <b>로봇 시스템에 이상이 감지됐을 때</b></td></tr>
+</tbody></table><p style="margin-top:8px">자율주행 중에는 알림 카드가 펼쳐진 상태로 나타나고, 관제 · 현장 모드로 주행 중일 때는 아이콘과 제목만 보이는 접힌 상태로 나타납니다.</p></div>
+<div class="tbl" style="margin-bottom:16px"><table><thead><tr><th>번호</th><th>알림</th><th>알림 코드</th></tr></thead><tbody><tr><td class="n"><b>8-3</b></td><td>관제 중 장애물 인지</td><td class="n"><code>SDS-6</code></td></tr><tr><td class="n"><b>8-4</b></td><td>자율주행 고립 정지</td><td class="n"><code>ADS-25</code></td></tr><tr><td class="n"><b>8-4</b></td><td>건널목 앞 정지</td><td class="n"><code>ADS-33</code></td></tr><tr><td class="n"><b>8-4</b></td><td>위치 · 경로 이탈</td><td class="n"><code>ADS-27</code></td></tr><tr><td class="n"><b>8-5</b></td><td>로봇 시스템 이상</td><td>아래 8-5 표 참고</td></tr></tbody></table></div>
 <div class="rows">
   <div class="row"><span class="num">8-3</span><div class="rc"><p class="rt">관제 중 장애물 인지</p><img src="../assets/img/3d00390921c2.png" alt="관제 중 장애물 인지 알림" loading="lazy" width="240" height="98" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"><p class="rd"><b>관제로 주행하는 중</b> 자동정지(<a href="#p6">3-4</a>)가 켜진 상태에서 장애물을 감지해 로봇이 멈추면 나타납니다.</p><ul><li>주변 장애물을 확인한 뒤 <b>자동정지를 OFF</b> 하고 주행을 다시 시작하세요.</li><li>자동정지를 OFF 하면 알림이 사라집니다.</li></ul></div></div>
   <div class="row"><span class="num">8-4</span><div class="rc"><p class="rt">관제 요청 알림</p><p class="rd">자율주행 중 로봇이 스스로 해결하기 어려운 상황에서 멈추면 나타납니다. 카드에 멈춘 이유와 해야 할 일이 함께 표시됩니다.</p><ul><li><b>자율주행 고립 정지</b> · 앞 장애물이나 자율주행 판단 이상으로 멈춘 상태입니다. 주변을 확인한 뒤 관제로 개입해 빠져나오세요.<img src="../assets/img/30f3373503a7.png" alt="자율주행 고립 정지 알림" loading="lazy" width="240" height="97" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li><li><b>건널목 앞 정지</b> · 건널목 앞에서 멈춘 상태입니다. 신호를 확인한 뒤 횡단하세요. → <a href="#p13">08장</a><img src="../assets/img/37deb8232245.png" alt="건널목 앞 정지 알림" loading="lazy" width="240" height="78" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li><li><b>위치 · 경로 이탈</b> · 미니맵 위치 오차, 경로 소실 등으로 경로를 벗어난 상태입니다. GPS가 정상적으로 잡히는 구간까지 관제로 주행해 지정 경로로 돌아가세요.<img src="../assets/img/a584fb20772c.png" alt="위치 · 경로 이탈 알림" loading="lazy" width="240" height="117" style="display:block;width:240px;max-width:100%;height:auto;margin:8px 0 2px;border-radius:8px"></li></ul></div></div>
