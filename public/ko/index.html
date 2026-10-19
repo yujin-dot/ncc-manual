@@ -357,10 +357,11 @@
   <h2>Level 2 — 로봇 정지 시 조치 안내 알림</h2>
   <p class="lead">로봇이 멈췄거나 로봇 시스템에 이상이 생기면 <b>화면 왼쪽 위에 알림 카드</b>가 나타나, 원인과 해야 할 일을 함께 알려줍니다. 카드 색으로 알림 종류를 구분할 수 있습니다.</p>
 <div class="info"><h4>언제 표시되나요?</h4><table style="min-width:0;font-size:12.5px"><tbody>
-<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-3</b></td><td style="padding:4px 0">관제로 주행하는 중 <b>자동정지가 켜진 상태에서 장애물을 감지해 멈췄을 때</b> · <code>SDS-6</code></td></tr>
-<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-4</b></td><td style="padding:4px 0">자율주행 중 <b>앞 장애물 · 판단 이상으로 고립됐을 때</b> <code>ADS-25</code>, <b>건널목 앞에서 멈췄을 때</b> <code>ADS-33</code>, <b>위치 · 경로를 벗어났을 때</b> <code>ADS-27</code></td></tr>
-<tr><td style="padding:4px 10px 4px 0;white-space:nowrap;border:none"><b>8-5</b></td><td style="padding:4px 0;border:none">카메라 · 센서 · 구동부 · 자율주행 소프트웨어 등 <b>로봇 시스템에 이상이 감지됐을 때</b> (알림 코드는 아래 8-5 표 참고)</td></tr>
+<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-3</b></td><td style="padding:4px 0">관제로 주행하는 중 <b>자동정지가 켜진 상태에서 장애물을 감지해 멈췄을 때</b></td></tr>
+<tr><td style="padding:4px 10px 4px 0;white-space:nowrap"><b>8-4</b></td><td style="padding:4px 0">자율주행 중 <b>앞 장애물 · 판단 이상으로 고립됐을 때</b>, <b>건널목 앞에서 멈췄을 때</b>, <b>위치 · 경로를 벗어났을 때</b></td></tr>
+<tr><td style="padding:4px 10px 4px 0;white-space:nowrap;border:none"><b>8-5</b></td><td style="padding:4px 0;border:none">카메라 · 센서 · 구동부 · 자율주행 소프트웨어 등 <b>로봇 시스템에 이상이 감지됐을 때</b></td></tr>
 </tbody></table><p style="margin-top:8px">자율주행 중에는 알림 카드가 펼쳐진 상태로 나타나고, 관제 · 현장 모드로 주행 중일 때는 아이콘과 제목만 보이는 접힌 상태로 나타납니다.</p></div>
+<div class="tbl" style="margin-bottom:16px"><table><thead><tr><th>번호</th><th>알림</th><th>알림 코드</th></tr></thead><tbody><tr><td class="n"><b>8-3</b></td><td>관제 중 장애물 인지</td><td class="n"><code>SDS-6</code></td></tr><tr><td class="n"><b>8-4</b></td><td>자율주행 고립 정지</td><td class="n"><code>ADS-25</code></td></tr><tr><td class="n"><b>8-4</b></td><td>건널목 앞 정지</td><td class="n"><code>ADS-33</code></td></tr><tr><td class="n"><b>8-4</b></td><td>위치 · 경로 이탈</td><td class="n"><code>ADS-27</code></td></tr><tr><td class="n"><b>8-5</b></td><td>로봇 시스템 이상</td><td>아래 8-5 표 참고</td></tr></tbody></table></div>
 <div class="figwrap">
 <div class="fig">
   <img src="../assets/img/51bdaf19817c.png" alt="화면 왼쪽 위 조치 안내 알림" loading="lazy" width="1240" height="469">
