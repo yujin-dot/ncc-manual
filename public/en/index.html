@@ -79,12 +79,13 @@
   <section class="updates" aria-labelledby="upd-en">
     <h2 id="upd-en">What's New</h2>
     <div class="tbl"><table><thead><tr><th>Date</th><th>Section</th><th>Change</th></tr></thead><tbody>
+      <tr><td class="n">2026.11.09</td><td><a href="#p6" data-to="step-guide">03 Video &amp; Controls</a></td><td>Added the <b>step indicator</b> (3-6 – 3-9)</td></tr>
       <tr><td class="n">2026.10.16</td><td><a href="#p14">09 NCC Settings</a></td><td>Added <b>NCC time zone settings</b> guide (9-1 – 9-5)</td></tr>
       <tr><td class="n">2026.10.16</td><td><a href="#p11" data-to="lv2-stop">06 Alerts</a></td><td>Added <b>stop action guide alerts</b> (8-3 – 8-7)</td></tr>
     </tbody></table></div>
   </section>
   <div class="meta">
-    <span><b>Last Updated</b> 2026.10.16</span>
+    <span><b>Last Updated</b> 2026.11.09</span>
   </div>
 </div></section>
 <section class="page" id="p2" hidden data-ch="01" data-title="Screen Overview">
@@ -213,10 +214,27 @@
   <div class="row"><span class="num">3-1</span><div class="rc"><p class="rt">Cargo Box</p><p class="rd">Opens and closes the cargo box. The button shows the <b>Closed / Open</b> current state. Driving with the cargo box open triggers the alert “[Cargo Box Caution] The cargo box is open. Please close the cargo box.”</p></div></div>
   <div class="row"><span class="num">3-2</span><div class="rc"><p class="rt">Headlamp</p><p class="rd">Turns the robot's front light on and off. Use it to secure video visibility at night or in dark indoor sections.</p></div></div>
   <div class="row"><span class="num">3-3</span><div class="rc"><p class="rt">Gamepad</p><p class="rd">Enables input so you can drive directly with a gamepad connected to the control PC. Pad input reaches the robot only when ON.</p></div></div>
-  <div class="row"><span class="num">3-4</span><div class="rc"><p class="rt">Auto-Stop</p><p class="rd">While <b>you are driving the robot remotely</b>, it stops automatically when it detects an obstacle or a step.</p><ul><li>To get through the spot where it stopped, first check that the area is safe and find a way around, then turn it <b>OFF</b>.</li><li>Once you're through, turn it back <b>ON</b>.</li><li>It turns <b>ON</b> automatically whenever you switch to remote driving.</li></ul></div></div>
+  <div class="row"><span class="num">3-4</span><div class="rc"><p class="rt">Auto-Stop</p><p class="rd">While <b>you are driving the robot remotely</b>, it stops automatically when it detects an obstacle or a step.</p><ul><li>To get through the spot where it stopped, first check that the area is safe and find a way around, then turn it <b>OFF</b>.</li><li>Once you're through, turn it back <b>ON</b>.</li><li>It turns <b>ON</b> automatically whenever you switch to remote driving.</li><li>Turning it OFF turns on the <b>step indicator</b> on the video. → <a href="#p6" data-to="step-guide">3-6</a></li></ul></div></div>
   <div class="row"><span class="num">3-5</span><div class="rc"><p class="rt">Brake</p><p class="rd">Holds the robot in place. Unlike the other buttons, it is <b>prominently highlighted in red</b> so you can find it immediately in an emergency.</p><ul><li>When ON, the robot won't move under autonomous or manual driving.</li></ul></div></div>
 </div>
 </section>
+<section class="card" id="step-guide">
+  <h2>Step Indicator — When Auto-Stop Is OFF</h2>
+  <p class="lead">The robot detects <b>curbs and dips</b> that are hard to spot in the video alone and marks them on the camera view, so you can see them from a distance and slow down or steer around them.</p>
+<div class="figwrap">
+<div class="fig">
+  <img src="../assets/img/a89e3570ef67.webp" alt="Remote control screen with the step indicator on" loading="lazy" width="1240" height="758">
+  <span class="hot l" data-n="3-6" style="left:84.435%;top:40.897%;width:9.032%;height:6.596%"></span>
+  <span class="hot t" data-n="3-7" style="left:37.903%;top:49.077%;width:21.371%;height:19.525%"></span>
+</div>
+</div>
+<div class="rows">
+  <div class="row"><span class="num">3-6</span><div class="rc"><p class="rt">Turning It On · Off</p><p class="rd">Turn <b>Auto-Stop (3-4) OFF</b> and the step indicator turns on; turn it back <b>ON</b> and the indicator disappears.</p><ul><li>It is not shown while Auto-Stop is ON or during autonomous driving.</li></ul></div></div>
+  <div class="row"><span class="num">3-7</span><div class="rc"><p class="rt">Guide Lines and Orange Marks</p><p class="rd">Left and right guide lines are drawn on the video along the robot's path. <b>White shows the path</b>; <b>orange means there is a step nearby</b>.</p><ul><li>The side guide lines are normally white and turn <b>orange</b> when a step is detected on that side.</li><li>A step on the floor inside the guide lines is filled as <b>orange cells</b> — a spot where a wheel could drop or catch and tip the robot if you drive straight over it.</li><li>The guide lines are set slightly wider than the robot and converge toward the center with distance.</li><li>When you steer with the gamepad, the lines bend that way to show the path ahead. They are a prediction from your input, so the actual path may differ slightly.</li><li>Only height differences in the ground are shown — objects such as bicycles are not.</li></ul><img src="../assets/img/de023b6399bf.webp" alt="Right guide line turned orange at a curb" loading="lazy" width="1259" height="940" style="display:block;width:100%;max-width:420px;height:auto;margin:10px 0 2px;border-radius:8px"><p class="figcap" style="text-align:left;margin-top:6px">The right guide line has turned orange because of the curb on the right.</p></div></div>
+  <div class="row"><span class="num">3-8</span><div class="rc"><p class="rt">When You See Orange</p><p class="rd">First <b>slow down</b>, check in the video whether the marked spot is really a step, then decide whether to cross or avoid it. The lines bend as you steer, so pass by <b>watching the step move outside the lines</b>.</p><ul><li>The robot <b>does not stop</b> when a step is shown. Slow down and avoid it yourself.</li></ul></div></div>
+  <div class="row"><span class="num">3-9</span><div class="rc"><p class="rt">When the Indicator May Be Inaccurate</p><p class="rd">The step indicator is a driving aid. In the cases below, marks may be missing or differ from reality.</p><ul><li>Clear height differences such as curbs or planter edges show from far away; <b>low edges only show up close</b>.</li><li><b>Ramps the robot can drive over may also show as steps.</b></li><li>Marks far along the guide lines may be inaccurate and get more accurate as you approach.</li><li>The area right in front of the robot and directly beside its body is not shown.</li><li>Marks may appear closer than they are or lag slightly.</li><li>In <b>strong sunlight, dark nights, around sunrise and sunset, rain or snow</b>, and on <b>puddles and crosswalks</b>, marks may be missing or appear where there is no step.</li><li>If marks keep appearing on flat ground, the robot may need inspection. Report the robot number and location to customer support.</li></ul></div></div>
+</div>
+</section><div class="info warn"><h4>The Step Indicator Does Not Replace Auto-Stop</h4>It only helps you drive while Auto-Stop is OFF. <b>Steps or objects may be there even without a mark</b>, so always check the video yourself.</div>
 </section>
 <section class="page" id="p7" hidden data-ch="04" data-title="Mission Panel">
   <p class="eyebrow">04 · Missions</p>
