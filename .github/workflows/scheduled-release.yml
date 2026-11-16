@@ -1,0 +1,34 @@
+# 예약 공개: 정해진 시간에 release 브랜치를 main에 합칩니다.
+# main에 push되면 Vercel이 자동 배포합니다. 합친 뒤 브랜치를 지우므로 다시 실행돼도 아무 일도 하지 않습니다.
+name: Scheduled release
+
+on:
+  schedule:
+    - cron: "0 4 17 11 *"   # 2026-11-17 13:00 KST (04:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  RELEASE_BRANCH: step-indicator-release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Merge release branch into main
+        run: |
+          if ! git ls-remote --exit-code --heads origin "$RELEASE_BRANCH" >/dev/null; then
+            echo "No $RELEASE_BRANCH branch; nothing to release."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$RELEASE_BRANCH"
+          git merge --no-edit "origin/$RELEASE_BRANCH"
+          git push origin main
+          git push origin --delete "$RELEASE_BRANCH"
